@@ -29,11 +29,10 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <div className="relative h-11 w-11 overflow-hidden rounded-full bg-white/10 shadow-inner shadow-black/10">
             <Image
-              src="/logo.svg"
+              src="/logos.svg"
               alt="Hapugala Vidyalaya logo"
               fill
               className="object-contain"
-              style={{ mixBlendMode: 'screen' }}
             />
           </div>
           <div className="flex flex-col leading-tight">
