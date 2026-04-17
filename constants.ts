@@ -20,21 +20,16 @@ export const SCHOOL_DATA = {
   houses: [
     { name: "Mahasen House", color: "Blue", hex: "rgb(47, 50, 147)" },
     { name: "Gemunu House", color: "Red", hex: "#DC2626" },
-    { name: "Perakum House", color: "Green", hex: "#16A34A" },
-    { name: "Vijaya House", color: "Yellow", hex: "rgb(255, 242, 0)" }
-  ],
+    { name: "Perakum House", color: "Green", hex: "#16A34A" }
+    ],
   vision: "To become the best school in Akmeemana division — creating a learning and teaching environment where national goals are achieved. A generation of knowledgeable, virtuous, proud students contributing to the society. Creating a society-friendly active child who is polished on learning skills. The future world is meaningful through new technology and universal language, donating a group of children who can win as contributors to the community.",
   mission: "We have the resources to produce human citizens who can overcome the challenges of the future work world."
 };
 
 export const NAV_ITEMS = [
   { label: "Home", href: "#" },
-  { label: "About Our School", href: "#about" },
-  { label: "Academic", href: "#academic" },
-  { label: "News & Highlights", href: "#news" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Clubs & Associations", href: "#clubs" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "About", href: "#about" },
+  { label: "News", href: "#news" },
   { label: "Contact Us", href: "#contact" }
 ];
 

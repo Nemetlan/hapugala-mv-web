@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import { SCHOOL_DATA } from '../constants';
 import { ChevronDown } from 'lucide-react';
+import { fonts } from '../fonts/fonts';
 
 export function Hero() {
   return (
@@ -35,23 +36,36 @@ export function Hero() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center"
         >
-          <h1 className="text-6xl md:text-8xl font-handwriting text-white mb-4 leading-tight tracking-normal">
+          <h1 className="text-gold-heritage font-serif text-xl md:text-2xl tracking-widest mb-7">
+            <div className={fonts.parma.className}>
             <motion.span
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.5 }}
               className="block"
             >
-              Let&apos;s Go Forward
-            </motion.span>
+              Hapugala National College
+            </motion.span></div>
+          </h1>
+
+          <h1 className="text-6xl md:text-8xl font-handwriting text-white mb-4 leading-tight tracking-normal italic">
+            <div className={fonts.samthing.className}>
+            <motion.span
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5, delay: 0.5 }}
+              className="block"
+            >
+             Let&apos;s Go Forward
+            </motion.span></div>
           </h1>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
-            className="text-gold-heritage font-serif italic text-xl md:text-2xl tracking-widest"
+            className="text-gold-heritage font-serif text-xl md:text-2xl tracking-widest"
           >
-            Since 1902
+            <div className={fonts.nvmontravia.className}>Since 1902</div>
           </motion.div>
         </motion.div>
       </div>

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { NAV_ITEMS, SCHOOL_DATA } from '../constants';
 import { motion, AnimatePresence } from 'motion/react';
+import { fonts } from '../fonts/fonts';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,8 +50,8 @@ export function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               className="hidden md:block"
             >
-              <div className="font-serif font-bold text-white text-sm tracking-wider leading-tight">
-                HAPUGALA VIDYALAYA
+              <div className="font-serif font-bold text-white text-xs tracking-wider leading-tight">
+                <div className={fonts.parma.className}>HAPUGALA VIDYALAYA</div>
               </div>
               <div className="text-[8px] text-gold-heritage font-medium tracking-[0.3em] uppercase">
                 GALLE
@@ -74,7 +75,7 @@ export function Navbar() {
                 : 'bg-white/10 text-white hover:bg-white hover:text-midnight border border-white/20'
             }`}
           >
-            Visit
+            News
           </a>
         </div>
       </motion.nav>

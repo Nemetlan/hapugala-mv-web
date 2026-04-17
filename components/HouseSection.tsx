@@ -17,7 +17,7 @@ export function HouseSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10">
           {SCHOOL_DATA.houses.map((house) => (
             <motion.div
               key={house.name}

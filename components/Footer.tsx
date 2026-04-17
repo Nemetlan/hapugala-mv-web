@@ -3,7 +3,7 @@ import { SCHOOL_DATA, NAV_ITEMS } from '../constants';
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-white pt-24 pb-12">
+    <footer className="bg-navy text-white pt-10 pb-8">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
