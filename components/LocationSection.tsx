@@ -34,7 +34,6 @@ export function LocationSection() {
               alt="Map Location"
               fill
               className="object-cover opacity-50 grayscale"
-              unoptimized
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="bg-white p-4 rounded-brand shadow-lg border border-border-grey flex items-center gap-3">

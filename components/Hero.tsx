@@ -56,7 +56,7 @@ export function Hero() {
         animate={{ y: [0, 12, 0] }}
         transition={{ duration: 2.2, repeat: Infinity }}
         onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/10 p-3 text-white/90 shadow-xl shadow-black/25 transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-gold-heritage"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full p-3 text-white/90 shadow-xl shadow-black/25 transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-gold-heritage"
         aria-label="Scroll to next section"
       >
         <div className="flex flex-col items-center gap-2">

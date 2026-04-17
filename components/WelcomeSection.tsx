@@ -47,7 +47,6 @@ export function WelcomeSection() {
                 alt="Principal"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                unoptimized
               />
             </div>
           </motion.div>

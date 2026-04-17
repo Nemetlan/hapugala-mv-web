@@ -37,7 +37,6 @@ export function StructureSection() {
                   alt={section.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-navy/20 group-hover:bg-navy/40 transition-colors"></div>
               </div>
