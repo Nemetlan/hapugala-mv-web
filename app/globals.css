@@ -23,8 +23,14 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+    background: radial-gradient(circle at top, rgba(255, 242, 0, 0.08), transparent 26%), linear-gradient(180deg, #050816 0%, #0b1531 100%);
+  }
+
   body {
-    @apply bg-white text-midnight font-sans antialiased;
+    @apply min-h-screen bg-transparent text-midnight font-sans antialiased overflow-x-hidden overscroll-none;
   }
 
   h1, h2, h3, h4, h5, h6 {

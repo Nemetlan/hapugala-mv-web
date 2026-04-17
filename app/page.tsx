@@ -1,5 +1,4 @@
 import { Navbar } from '../components/Navbar';
-import { TopBar } from '../components/TopBar';
 import { Hero } from '../components/Hero';
 import { WelcomeSection } from '../components/WelcomeSection';
 import { EthosSection } from '../components/EthosSection';

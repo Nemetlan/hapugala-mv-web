@@ -14,7 +14,7 @@ export function NewsSection() {
   return (
     <section id="news" className="py-24 bg-cream border-t border-border-grey">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-end mb-16">
+        <div className="flex flex-col gap-6 justify-between items-start mb-16 md:flex-row md:items-end">
           <div>
             <div className="text-gold-heritage font-bold uppercase tracking-[0.2em] text-xs mb-4">
               Updates

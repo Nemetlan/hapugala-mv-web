@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description: "Official website of Hapugala Vidyalaya Galle, Sri Lanka. Established 1902. Let's Go Forward.",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: {

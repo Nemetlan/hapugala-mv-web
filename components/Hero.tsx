@@ -1,86 +1,71 @@
 'use client';
 
 import { motion } from 'motion/react';
-import Image from 'next/image';
-import { SCHOOL_DATA } from '../constants';
 import { ChevronDown } from 'lucide-react';
 import { fonts } from '../fonts/fonts';
 
 export function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-midnight">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-          className="w-full h-full"
-        >
-          <Image
-            src="https://picsum.photos/seed/college/1920/1080"
-            alt="Hapugala Vidyalaya Galle Campus"
-            fill
-            className="object-cover"
-            priority
-            unoptimized
-          />
-        </motion.div>
-        <div className="absolute inset-0 bg-black/60"></div>
+    <section className="relative overflow-hidden bg-[url('https://picsum.photos/seed/college/1920/1080')] bg-cover bg-center min-h-screen flex flex-col justify-center">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/95" />
+        <div className="absolute -left-16 top-10 h-60 w-60 rounded-full bg-gold-heritage/10 blur-3xl" />
+        <div className="absolute right-[-4rem] top-1/3 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/90 to-transparent" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 w-full text-center">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 flex flex-col justify-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col items-center"
+          className="mx-auto max-w-3xl rounded-[2rem] border border-white/15 bg-black/30 p-6 shadow-[0_40px_120px_-55px_rgba(0,0,0,0.95)] backdrop-blur-xl sm:p-10"
         >
-          <h1 className="text-gold-heritage font-serif text-xl md:text-2xl tracking-widest mb-7">
-            <div className={fonts.parma.className}>
-            <motion.span
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
-              className="block"
-            >
-              Hapugala National College
-            </motion.span></div>
-          </h1>
+          <div className="text-center">
+            <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.35em] text-white/80 shadow-sm sm:text-xs mb-6">
+              <span className={fonts.parma.className}>Hapugala National College</span>
+            </div>
 
-          <h1 className="text-6xl md:text-8xl font-handwriting text-white mb-4 leading-tight tracking-normal italic">
-            <div className={fonts.samthing.className}>
-            <motion.span
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
-              className="block"
-            >
-             Let&apos;s Go Forward
-            </motion.span></div>
-          </h1>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="text-gold-heritage font-serif text-xl md:text-2xl tracking-widest"
-          >
-            <div className={fonts.nvmontravia.className}>Since 1902</div>
-          </motion.div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-handwriting italic text-white leading-[0.95] sm:leading-[0.98] mb-5">
+              <span className={fonts.samthing.className}>Let&apos;s Go Forward</span>
+            </h1>
+
+            <p className="mx-auto max-w-2xl text-sm sm:text-base text-white/80 leading-7 sm:leading-8 tracking-wide">
+              A proud legacy since 1902, empowering young leaders in Galle with academic excellence, character formation, and community spirit.
+            </p>
+
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+              <button
+                onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-gold-heritage to-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-midnight shadow-lg shadow-gold-heritage/20 transition duration-300 hover:scale-[1.02] hover:shadow-xl"
+              >
+                Explore
+              </button>
+              <a
+                href="#about"
+                className="text-sm sm:text-base font-semibold uppercase tracking-[0.18em] text-white/80 transition duration-300 hover:text-white"
+              >
+                Discover more
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50 cursor-pointer hover:text-gold-heritage transition-colors"
+      <motion.button
+        animate={{ y: [0, 12, 0] }}
+        transition={{ duration: 2.2, repeat: Infinity }}
         onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/10 p-3 text-white/90 shadow-xl shadow-black/25 transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-gold-heritage"
+        aria-label="Scroll to next section"
       >
-        <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center">
-          <ChevronDown size={20} />
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10">
+            <ChevronDown size={28} />
+          </div>
+          <span className="text-[11px] uppercase tracking-[0.35em] text-white/75">Scroll</span>
         </div>
-      </motion.div>
+      </motion.button>
     </section>
   );
 }
