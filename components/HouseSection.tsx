@@ -11,7 +11,7 @@ export function HouseSection() {
           <div className="text-gold-heritage font-bold uppercase tracking-[0.2em] text-xs mb-4">
             Our Community
           </div>
-          <h2 className="text-4xl font-serif font-bold text-navy">The Four Houses</h2>
+          <h2 className="text-4xl font-serif font-bold text-navy">The Three Houses</h2>
           <p className="mt-4 text-midnight/60 max-w-2xl mx-auto">
             Our house system fosters healthy competition, leadership, and a sense of belonging among students.
           </p>
