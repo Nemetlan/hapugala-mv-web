@@ -19,18 +19,18 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        isScrolled
-          ? 'border-b border-white/10 bg-navy/70 shadow-lg shadow-black/20 backdrop-blur-xl backdrop-saturate-150'
-          : 'border-b border-transparent bg-transparent shadow-none backdrop-blur-0'
+      className={`fixed inset-x-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        isScrolled ? 'top-3 sm:top-4' : 'top-0'
       }`}
     >
       <motion.nav
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className={`mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 transition-all duration-500 ease-out ${
-          isScrolled ? 'py-3' : 'py-5'
+        className={`mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          isScrolled
+            ? 'mx-3 sm:mx-6 rounded-full border border-white/15 bg-navy/70 py-2.5 shadow-lg shadow-black/30 backdrop-blur-xl backdrop-saturate-150'
+            : 'rounded-none border border-transparent bg-transparent py-5 shadow-none backdrop-blur-0'
         }`}
       >
         <a href="/" className="flex items-center gap-3">
@@ -102,13 +102,13 @@ export function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden overflow-hidden border-t border-white/10 bg-navy/95 backdrop-blur-2xl"
+            className="md:hidden mx-3 sm:mx-6 mt-2 overflow-hidden rounded-3xl border border-white/15 bg-navy/90 shadow-lg shadow-black/30 backdrop-blur-2xl"
           >
-            <div className="mx-auto max-w-6xl space-y-1 px-4 py-4 sm:px-6">
+            <div className="space-y-1 px-3 py-3 sm:px-4">
               <a
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
