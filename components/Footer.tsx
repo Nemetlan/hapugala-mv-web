@@ -57,7 +57,7 @@ export function Footer() {
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/40 uppercase tracking-widest">
           <div>© {new Date().getFullYear()} {SCHOOL_DATA.name}. All Rights Reserved.</div>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-gold-heritage transition-colors">Privacy Policy</a>
+            <a href="/admin" className="hover:text-gold-heritage transition-colors">Admin Pannel</a>
             <a href="#" className="hover:text-gold-heritage transition-colors">Terms of Use</a>
           </div>
         </div>
