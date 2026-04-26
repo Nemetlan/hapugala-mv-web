@@ -57,7 +57,7 @@ export function Navbar() {
             Contact
           </a>
           <a
-            href="#visit"
+            href="/news"
             className={`rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition duration-300 ${
               isScrolled ? 'bg-gold-heritage text-midnight hover:bg-white' : 'bg-white/10 text-white hover:bg-white hover:text-midnight border border-white/20'
             }`}
@@ -99,7 +99,7 @@ export function Navbar() {
                 Contact
               </a>
               <a
-                href="#visit"
+                href="/news"
                 className="block rounded-full bg-gold-heritage px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.18em] text-midnight transition hover:bg-white"
               >
                 News
