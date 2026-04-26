@@ -19,7 +19,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 z-50 items-center justify-between w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isScrolled ? 'top-3 sm:top-4' : 'top-0'
+      className={`fixed inset-x-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isScrolled ? 'top-3 sm:top-4' : 'top-0'
         }`}
     >
       <motion.nav
@@ -27,8 +27,8 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className={`mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isScrolled
-            ? 'mx-3 sm:mx-6 rounded-full border border-white/15 bg-navy/70 py-2.5 shadow-lg shadow-black/30 backdrop-blur-xl backdrop-saturate-150'
-            : 'rounded-none border border-transparent bg-transparent py-5 shadow-none backdrop-blur-0'
+          ? 'mx-3 sm:mx-6 rounded-full border border-white/15 bg-navy/70 py-2.5 shadow-lg shadow-black/30 backdrop-blur-xl backdrop-saturate-150'
+          : 'rounded-none border border-transparent bg-transparent py-5 shadow-none backdrop-blur-0'
           }`}
       >
         <a href="/" className="flex items-center gap-3">
@@ -78,8 +78,8 @@ export function Navbar() {
           <a
             href="/news"
             className={`rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-500 ease-out ${isScrolled
-                ? 'bg-gold-heritage text-midnight hover:bg-white'
-                : 'border border-white/20 bg-white/10 text-white hover:bg-white hover:text-midnight'
+              ? 'bg-gold-heritage text-midnight hover:bg-white'
+              : 'border border-white/20 bg-white/10 text-white hover:bg-white hover:text-midnight'
               }`}
           >
             News
