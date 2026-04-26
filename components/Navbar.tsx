@@ -27,7 +27,7 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className={`mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isScrolled
-          ? 'mx-3 sm:mx-6 rounded-full border border-white/15 bg-navy/70 py-2.5 shadow-lg shadow-black/30 backdrop-blur-xl backdrop-saturate-150'
+          ? 'px-3 sm:px-6 rounded-full border border-white/15 bg-navy/70 py-2.5 shadow-lg shadow-black/30 backdrop-blur-xl backdrop-saturate-150'
           : 'rounded-none border border-transparent bg-transparent py-5 shadow-none backdrop-blur-0'
           }`}
       >
