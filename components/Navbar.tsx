@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { fonts } from '../fonts/fonts';
 import { Menu, X } from 'lucide-react';
@@ -31,7 +32,7 @@ export function Navbar() {
           : 'rounded-none border border-transparent bg-transparent py-5 shadow-none backdrop-blur-0'
           }`}
       >
-        <a href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <div className="relative h-11 w-11 overflow-hidden rounded-full bg-white/10 shadow-inner shadow-black/10">
             <Image
               src="/logos.svg"
@@ -48,34 +49,34 @@ export function Navbar() {
               Galle
             </span>
           </div>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-4 lg:gap-6">
-          <a
+          <Link
             href="/"
             className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:text-gold-heritage"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#about"
             className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:text-gold-heritage"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#academic"
             className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:text-gold-heritage"
           >
             Academic
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#contact"
             className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:text-gold-heritage"
           >
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="/news"
             className={`rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-500 ease-out ${isScrolled
               ? 'bg-gold-heritage text-midnight hover:bg-white'
@@ -83,7 +84,7 @@ export function Navbar() {
               }`}
           >
             News
-          </a>
+          </Link>
         </div>
 
         <button
@@ -106,41 +107,41 @@ export function Navbar() {
             className="md:hidden mx-3 sm:mx-6 mt-2 overflow-hidden rounded-3xl border border-white/15 bg-navy/90 shadow-lg shadow-black/30 backdrop-blur-2xl"
           >
             <div className="space-y-1 px-3 py-3 sm:px-4">
-              <a
+              <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block rounded-2xl px-5 py-4 text-base font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 hover:text-gold-heritage"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#about"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block rounded-2xl px-5 py-4 text-base font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 hover:text-gold-heritage"
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#academic"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block rounded-2xl px-5 py-4 text-base font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 hover:text-gold-heritage"
               >
                 Academic
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block rounded-2xl px-5 py-4 text-base font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 hover:text-gold-heritage"
               >
                 Contact
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/news"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block rounded-full bg-gold-heritage px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.18em] text-midnight transition hover:bg-white"
               >
                 News
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 import { fonts } from '../fonts/fonts';
 
 export function Hero() {
@@ -41,12 +42,12 @@ export function Hero() {
               >
                 Explore
               </button>
-              <a
+              <Link
                 href="/news"
                 className="text-sm sm:text-base font-semibold uppercase tracking-[0.18em] text-white/80 transition duration-300 hover:text-white"
               >
                 What's New
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>

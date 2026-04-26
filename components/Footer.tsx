@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { SCHOOL_DATA, NAV_ITEMS } from '../constants';
 
 export function Footer() {
@@ -35,9 +36,9 @@ export function Footer() {
             <ul className="space-y-4">
               {NAV_ITEMS.map(item => (
                 <li key={item.label}>
-                  <a href={item.href} className="text-white/60 hover:text-gold-heritage transition-colors text-sm">
+                  <Link href={item.href} className="text-white/60 hover:text-gold-heritage transition-colors text-sm">
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -57,8 +58,8 @@ export function Footer() {
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/40 uppercase tracking-widest">
           <div>© {new Date().getFullYear()} {SCHOOL_DATA.name}. All Rights Reserved.</div>
           <div className="flex gap-8">
-            <a href="/admin" className="hover:text-gold-heritage transition-colors">Admin Pannel</a>
-            <a href="#" className="hover:text-gold-heritage transition-colors">Terms of Use</a>
+            <Link href="/admin" className="hover:text-gold-heritage transition-colors">Admin Pannel</Link>
+            <Link href="#" className="hover:text-gold-heritage transition-colors">Terms of Use</Link>
           </div>
         </div>
       </div>

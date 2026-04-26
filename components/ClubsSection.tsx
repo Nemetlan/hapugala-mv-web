@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import { CLUBS } from '../constants';
 
 export function ClubsSection() {
@@ -14,9 +15,9 @@ export function ClubsSection() {
             </div>
             <h2 className="text-4xl font-serif font-bold text-navy">Clubs &amp; Co-Curricular</h2>
           </div>
-          <a href="#clubs" className="text-sm font-bold uppercase tracking-widest text-navy border-b-2 border-gold-heritage pb-1 hover:text-gold-heritage transition-colors">
+          <Link href="#clubs" className="text-sm font-bold uppercase tracking-widest text-navy border-b-2 border-gold-heritage pb-1 hover:text-gold-heritage transition-colors">
             View All 15+ Clubs
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
