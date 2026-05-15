@@ -59,7 +59,7 @@ export function Navbar() {
             Home
           </Link>
           <Link
-            href="/#about"
+            href="/about"
             className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:text-gold-heritage"
           >
             About
@@ -115,7 +115,7 @@ export function Navbar() {
                 Home
               </Link>
               <Link
-                href="/#about"
+                href="/about"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block rounded-2xl px-5 py-4 text-base font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 hover:text-gold-heritage"
               >

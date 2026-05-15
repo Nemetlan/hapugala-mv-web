@@ -43,7 +43,7 @@ export default async function AdminDashboardPage() {
             Welcome, Administrator
           </h1>
           <p className="text-white/60 mt-2">
-            Manage your school's digital presence from this central console.
+            Manage your school&apos;s digital presence from this central console.
           </p>
         </header>
 

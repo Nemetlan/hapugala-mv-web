@@ -27,10 +27,10 @@ export const SCHOOL_DATA = {
 };
 
 export const NAV_ITEMS = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "News", href: "#news" },
-  { label: "Contact Us", href: "#contact" }
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "News", href: "/news" },
+  { label: "Contact Us", href: "/#contact" }
 ];
 
 export const CLUBS = [

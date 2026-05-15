@@ -46,7 +46,7 @@ export function Hero() {
                 href="/news"
                 className="text-sm sm:text-base font-semibold uppercase tracking-[0.18em] text-white/80 transition duration-300 hover:text-white"
               >
-                What's New
+                What&apos;s New
               </Link>
             </div>
           </div>
