@@ -34,7 +34,7 @@ export function StructureSection() {
               <div className="relative aspect-[4/3] rounded-brand overflow-hidden mb-4">
                 <Image
                   src={section.image}
-                  alt={section.title}
+                  alt={`${section.title} section at Hapugala Vidyalaya Galle`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />

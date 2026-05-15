@@ -9,7 +9,7 @@ export const SCHOOL_DATA = {
   country: "Sri Lanka",
   phone: "(+94) 91 22 41 546",
   email: "hapugalamahavidyalaya@gmail.com",
-  website: "hapugalanc.sch.lk",
+  website: "hapugalacollege.lk",
   principal: "Mr. M.A.P. Pushpakumara",
   stats: {
     students: "1,170",

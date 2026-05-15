@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { NewsFeed } from '@/components/NewsFeed';
 import { createClient } from '@/lib/supabase/server';
 import type { NewsPost } from '@/lib/news';
+import { BreadcrumbSchema } from '@/components/JsonLd';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,6 +33,12 @@ export default async function NewsIndexPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbSchema 
+        items={[
+          { name: "Home", item: "https://hapugalacollege.lk" },
+          { name: "News", item: "https://hapugalacollege.lk/news" }
+        ]} 
+      />
       <Navbar />
       <main className="flex-grow">
         <section className="pt-36 pb-12 px-4">

@@ -44,7 +44,7 @@ export function WelcomeSection() {
             <div className="aspect-[4/5] bg-blue-tint rounded-brand overflow-hidden relative">
               <Image
                 src="https://picsum.photos/seed/principal/800/1000"
-                alt="Principal"
+                alt="Principal of Hapugala Vidyalaya Galle"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

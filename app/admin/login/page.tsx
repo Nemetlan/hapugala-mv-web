@@ -32,7 +32,7 @@ export default async function AdminLoginPage({
           <div className="relative h-12 w-12 overflow-hidden rounded-full bg-white/10">
             <Image
               src="/logos.svg"
-              alt="Hapugala Vidyalaya"
+              alt="Hapugala Vidyalaya Galle"
               fill
               className="object-contain"
             />

@@ -31,7 +31,7 @@ export function LocationSection() {
           <div className="aspect-video bg-border-grey rounded-brand overflow-hidden relative">
             <Image
               src="https://picsum.photos/seed/map/800/600"
-              alt="Map Location"
+              alt="Map showing the location of Hapugala Vidyalaya Galle in Wackwella"
               fill
               className="object-cover opacity-50 grayscale"
             />

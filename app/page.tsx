@@ -9,10 +9,12 @@ import { AchievementsSection } from '../components/AchievementsSection';
 import { NewsSection } from '../components/NewsSection';
 import { LocationSection } from '../components/LocationSection';
 import { Footer } from '../components/Footer';
+import { SchoolSchema } from '../components/JsonLd';
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SchoolSchema />
       <Navbar />
       <main className="flex-grow">
         <Hero />

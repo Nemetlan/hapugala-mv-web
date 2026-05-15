@@ -28,7 +28,7 @@ export function Sidebar() {
           <div className="relative h-10 w-10 overflow-hidden rounded-full bg-white/10">
             <Image
               src="/logos.svg"
-              alt="Logo"
+              alt="Hapugala Vidyalaya Galle Logo"
               fill
               className="object-contain"
             />

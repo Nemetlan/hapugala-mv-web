@@ -7,6 +7,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { createClient } from '@/lib/supabase/server';
 import { formatNewsDate, type NewsPost } from '@/lib/news';
+import { JsonLd, BreadcrumbSchema } from '@/components/JsonLd';
 
 export const dynamic = 'force-dynamic';
 
@@ -54,8 +55,30 @@ export default async function NewsDetailPage({ params }: { params: Params }) {
 
   const post = data as NewsPost;
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "image": post.cover_image_url ? [post.cover_image_url] : [],
+    "datePublished": post.published_at || post.created_at,
+    "dateModified": post.published_at || post.created_at,
+    "author": [{
+        "@type": "Organization",
+        "name": "Hapugala Vidyalaya Galle",
+        "url": "https://hapugalacollege.lk"
+      }]
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd data={articleSchema} />
+      <BreadcrumbSchema 
+        items={[
+          { name: "Home", item: "https://hapugalacollege.lk" },
+          { name: "News", item: "https://hapugalacollege.lk/news" },
+          { name: post.title, item: `https://hapugalacollege.lk/news/${post.slug}` }
+        ]} 
+      />
       <Navbar />
       <main className="flex-grow">
         <article className="pt-32 pb-20">
@@ -89,7 +112,7 @@ export default async function NewsDetailPage({ params }: { params: Params }) {
               <div className="relative aspect-video w-full overflow-hidden rounded-brand border border-white/10 shadow-2xl shadow-black/40">
                 <Image
                   src={post.cover_image_url}
-                  alt={post.title}
+                  alt={`Feature image for: ${post.title} - Hapugala Vidyalaya Galle`}
                   fill
                   sizes="(min-width: 1024px) 1024px, 100vw"
                   priority

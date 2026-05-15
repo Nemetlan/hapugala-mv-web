@@ -1,16 +1,24 @@
 'use client';
-
 import { Navbar } from '../../../components/Navbar';
 import { PageHero } from '../../../components/PageHero';
 import { Footer } from '../../../components/Footer';
 import { motion } from 'motion/react';
 import { Calendar, Users, Landmark, Award } from 'lucide-react';
+import { BreadcrumbSchema } from '../../../components/JsonLd';
 
 export default function HistoryPage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbSchema 
+        items={[
+          { name: "Home", item: "https://hapugalacollege.lk" },
+          { name: "About", item: "https://hapugalacollege.lk/about" },
+          { name: "History", item: "https://hapugalacollege.lk/about/history" }
+        ]} 
+      />
       <Navbar />
       <main className="flex-grow">
+...
         <PageHero 
           title="Our History" 
           subtitle="Hapugala Vidyalaya Galle"

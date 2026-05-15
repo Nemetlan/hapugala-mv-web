@@ -11,7 +11,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-8">
               <Image
                 src="/logo.svg"
-                alt="Logo"
+                alt="Hapugala Vidyalaya Galle Logo"
                 width={48}
                 height={48}
                 className="object-contain"
@@ -58,7 +58,7 @@ export function Footer() {
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/40 uppercase tracking-widest">
           <div>© {new Date().getFullYear()} {SCHOOL_DATA.name}. All Rights Reserved.</div>
           <div className="flex gap-8">
-            <Link href="/admin" className="hover:text-gold-heritage transition-colors">Admin Pannel</Link>
+            <Link href="/admin" className="hover:text-gold-heritage transition-colors">Admin Panel</Link>
             <Link href="#" className="hover:text-gold-heritage transition-colors">Terms of Use</Link>
           </div>
         </div>
