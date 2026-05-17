@@ -3,18 +3,27 @@
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { fonts } from '../fonts/fonts';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[url('https://picsum.photos/seed/college/1920/1080')] bg-cover bg-center min-h-screen flex flex-col justify-center">
+    <section className="relative overflow-hidden min-h-screen flex flex-col justify-center">
+      <Image
+        src="https://picsum.photos/seed/college/1920/1080"
+        alt="Hapugala Vidyalaya College Campus"
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+      />
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/95" />
         <div className="absolute -left-16 top-10 h-60 w-60 rounded-full bg-gold-heritage/10 blur-3xl" />
         <div className="absolute right-[-4rem] top-1/3 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/90 to-transparent" />
       </div>
-
+...
       <div className="relative mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 flex flex-col justify-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
