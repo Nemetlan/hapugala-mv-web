@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { SCHOOL_DATA } from '../constants';
 
@@ -28,15 +27,20 @@ export function LocationSection() {
             </div>
           </div>
 
-          <div className="aspect-video bg-border-grey rounded-brand overflow-hidden relative">
-            <Image
-              src="https://picsum.photos/seed/map/800/600"
-              alt="Map showing the location of Hapugala Vidyalaya Galle in Wackwella"
-              fill
-              className="object-cover opacity-50 grayscale"
+          <div className="aspect-video bg-border-grey rounded-brand overflow-hidden relative shadow-2xl shadow-navy/20">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.319717651034!2d80.18737527503657!3d6.087452893902307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1714beae1f2ab%3A0x9097a372d913ee1c!2sHapugala%20Vidyalaya!5e0!3m2!1sen!2slk!4v1715760000000!5m2!1sen!2slk"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Hapugala Vidyalaya Location Map"
+              className="grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white p-4 rounded-brand shadow-lg border border-border-grey flex items-center gap-3">
+            <div className="absolute bottom-4 left-4 pointer-events-none">
+              <div className="bg-white/90 backdrop-blur-md p-3 rounded-xl shadow-lg border border-border-grey flex items-center gap-3">
                 <div className="w-8 h-8 bg-navy rounded-full flex items-center justify-center text-white">
                   <MapPin size={16} />
                 </div>

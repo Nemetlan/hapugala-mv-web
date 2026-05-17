@@ -19,8 +19,8 @@ export async function createClient() {
             );
           } catch {
             // Setting cookies in a Server Component is a no-op when there
-            // is no proxy/middleware present. Sessions are refreshed via
-            // the proxy in middleware.ts.
+            // is no proxy present. Sessions are refreshed via
+            // the proxy.ts file.
           }
         },
       },
