@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Inter, Playfair_Display, Dancing_Script } from 'next/font/google';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const playfair_display = Playfair_Display({ subsets: ['latin'], variable: '--font-serif', weight: ['400', '700'], style: ['normal', 'italic'] });
@@ -25,7 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair_display.variable} ${dancing_script.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

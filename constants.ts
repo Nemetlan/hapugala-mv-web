@@ -10,7 +10,7 @@ export const SCHOOL_DATA = {
   phone: "(+94) 91 22 41 546",
   email: "hapugalamahavidyalaya@gmail.com",
   website: "hapugalacollege.lk",
-  principal: "Mr. M.A.P. Pushpakumara",
+  principal: "Mr. Dinesh Hettiarachchi",
   stats: {
     students: "1,170",
     staff: "63",
