@@ -20,7 +20,7 @@ export default async function NewsAdminPage() {
 
   const { data: recentPosts } = await supabase
     .from('news_posts')
-    .select('id,title,slug,excerpt,cover_image_url,status,published_at,content,created_at')
+    .select('id,title,slug,excerpt,cover_image_url,status,published_at,created_at')
     .order('published_at', { ascending: false })
     .limit(10);
 

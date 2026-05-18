@@ -16,6 +16,7 @@ export async function updateSession(request: NextRequest) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value),
           );
+          // Update the response with new cookies
           supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options),
@@ -25,20 +26,22 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  // Don't add code between createServerClient and supabase.auth.getUser().
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
   const { pathname } = request.nextUrl;
-  const isAdminArea =
-    pathname.startsWith('/admin') && pathname !== '/admin/login';
+  const isAdminArea = pathname.startsWith('/admin') && pathname !== '/admin/login';
 
-  if (isAdminArea && !user) {
-    const url = request.nextUrl.clone();
-    url.pathname = '/admin/login';
-    url.searchParams.set('next', pathname);
-    return NextResponse.redirect(url);
+  // Only call getUser if we are in admin area OR if there's an active session cookie.
+  // This speeds up public page loads significantly.
+  const hasSession = request.cookies.getAll().some(c => c.name.startsWith('sb-'));
+  
+  if (isAdminArea || hasSession) {
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (isAdminArea && !user) {
+      const url = request.nextUrl.clone();
+      url.pathname = '/admin/login';
+      url.searchParams.set('next', pathname);
+      return NextResponse.redirect(url);
+    }
   }
 
   return supabaseResponse;

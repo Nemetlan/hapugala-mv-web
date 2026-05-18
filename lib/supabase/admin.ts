@@ -1,11 +1,12 @@
 import { createClient } from '@/lib/supabase/server';
+import { cache } from 'react';
 
 /**
- * Returns { user, isAdmin } for the current request. If there is no user,
- * isAdmin is false. Admin status is determined by membership in
- * public.admins.
+ * Returns { user, isAdmin, supabase } for the current request.
+ * Wrapped in React cache() to ensure it only runs once per request even if called
+ * from multiple components (e.g., layout and page).
  */
-export async function getCurrentAdmin() {
+export const getCurrentAdmin = cache(async () => {
   const supabase = await createClient();
 
   const {
@@ -23,4 +24,4 @@ export async function getCurrentAdmin() {
     .maybeSingle();
 
   return { user, isAdmin: Boolean(adminRow), supabase };
-}
+});

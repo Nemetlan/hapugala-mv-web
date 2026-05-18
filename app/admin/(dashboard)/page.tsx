@@ -16,20 +16,19 @@ export default async function AdminDashboardPage() {
     return <NotAuthorized email={user.email ?? null} />;
   }
 
-  // Fetch counts
-  const { count: newsCount } = await supabase
-    .from('news_posts')
-    .select('*', { count: 'exact', head: true });
-
-  // Note: forms table might not exist yet if SQL hasn't been run manually by user
-  // but we assume it will be there.
-  const { count: formsCount } = await supabase
-    .from('forms')
-    .select('*', { count: 'exact', head: true });
+  // Fetch counts in parallel for better performance
+  const [newsRes, formsRes] = await Promise.all([
+    supabase
+      .from('news_posts')
+      .select('*', { count: 'exact', head: true }),
+    supabase
+      .from('forms')
+      .select('*', { count: 'exact', head: true })
+  ]);
 
   const stats = [
-    { label: 'News Posts', value: newsCount || 0, icon: Newspaper, href: '/admin/news', color: 'text-blue-400' },
-    { label: 'Active Forms', value: formsCount || 0, icon: FormInput, href: '/admin/forms', color: 'text-gold-heritage' },
+    { label: 'News Posts', value: newsRes.count || 0, icon: Newspaper, href: '/admin/news', color: 'text-blue-400' },
+    { label: 'Active Forms', value: formsRes.count || 0, icon: FormInput, href: '/admin/forms', color: 'text-gold-heritage' },
   ];
 
   return (
