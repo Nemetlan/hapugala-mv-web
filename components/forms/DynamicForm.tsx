@@ -79,7 +79,7 @@ export function DynamicForm({ formId, fields, title }: DynamicFormProps) {
               <textarea
                 required={field.required}
                 placeholder={field.placeholder}
-                value={formData[field.id] || ''}
+                value={typeof formData[field.id] === 'string' ? (formData[field.id] as string) : ''}
                 onChange={(e) => handleChange(field.id, e.target.value)}
                 className={inputStyles}
                 rows={4}
@@ -87,7 +87,7 @@ export function DynamicForm({ formId, fields, title }: DynamicFormProps) {
             ) : field.type === 'select' ? (
               <select
                 required={field.required}
-                value={formData[field.id] || ''}
+                value={typeof formData[field.id] === 'string' ? (formData[field.id] as string) : ''}
                 onChange={(e) => handleChange(field.id, e.target.value)}
                 className={inputStyles}
               >
@@ -101,7 +101,7 @@ export function DynamicForm({ formId, fields, title }: DynamicFormProps) {
                 <input
                   type="checkbox"
                   required={field.required}
-                  checked={formData[field.id] || false}
+                  checked={!!formData[field.id]}
                   onChange={(e) => handleChange(field.id, e.target.checked)}
                   className="w-5 h-5 rounded border-border-grey text-navy focus:ring-navy transition-all"
                 />
@@ -114,7 +114,7 @@ export function DynamicForm({ formId, fields, title }: DynamicFormProps) {
                 type={field.type}
                 required={field.required}
                 placeholder={field.placeholder}
-                value={formData[field.id] || ''}
+                value={typeof formData[field.id] === 'string' ? (formData[field.id] as string) : ''}
                 onChange={(e) => handleChange(field.id, e.target.value)}
                 className={inputStyles}
               />
