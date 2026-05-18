@@ -1,12 +1,12 @@
-import dynamic from 'next/dynamic';
+'use client';
+
 import { Navbar } from '../../components/Navbar';
 import { PageHero } from '../../components/PageHero';
+import { EthosSection } from '../../components/EthosSection';
+import { WelcomeSection } from '../../components/WelcomeSection';
 import { Footer } from '../../components/Footer';
+import HeritageSection from './HeritageSection';
 import { BreadcrumbSchema } from '../../components/JsonLd';
-
-const WelcomeSection = dynamic(() => import('../../components/WelcomeSection').then(mod => mod.WelcomeSection));
-const EthosSection = dynamic(() => import('../../components/EthosSection').then(mod => mod.EthosSection));
-const HeritageSection = dynamic(() => import('./HeritageSection'));
 
 export default function AboutPage() {
   return (

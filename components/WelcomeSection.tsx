@@ -13,6 +13,7 @@ export function WelcomeSection() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <div className="text-gold-heritage font-bold uppercase tracking-[0.2em] text-xs mb-4">
               A Message from the Principal
@@ -39,6 +40,7 @@ export function WelcomeSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="relative"
           >
             <div className="aspect-[4/5] bg-blue-tint rounded-brand overflow-hidden relative">

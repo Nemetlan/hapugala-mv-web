@@ -14,6 +14,7 @@ export function Hero() {
         alt="Hapugala Vidyalaya College Campus"
         fill
         priority
+        fetchPriority="high"
         className="object-cover"
         sizes="100vw"
       />
@@ -26,9 +27,9 @@ export function Hero() {
 ...
       <div className="relative mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 flex flex-col justify-center min-h-screen">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-3xl rounded-[2rem] border border-white/15 bg-black/30 p-6 shadow-[0_40px_120px_-55px_rgba(0,0,0,0.95)] backdrop-blur-xl sm:p-10"
         >
           <div className="text-center">

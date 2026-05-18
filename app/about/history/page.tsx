@@ -1,12 +1,12 @@
-import dynamic from 'next/dynamic';
+'use client';
+
 import { Navbar } from '../../../components/Navbar';
 import { PageHero } from '../../../components/PageHero';
 import { Footer } from '../../../components/Footer';
 import { Users } from 'lucide-react';
 import { BreadcrumbSchema } from '../../../components/JsonLd';
-
-const OriginsSection = dynamic(() => import('./OriginsSection'));
-const ErasSection = dynamic(() => import('./ErasSection'));
+import OriginsSection from './OriginsSection';
+import ErasSection from './ErasSection';
 
 export default function HistoryPage() {
   return (
@@ -28,7 +28,7 @@ export default function HistoryPage() {
 
         <OriginsSection />
 
-        {/* Principals Table - Static enough to be SSRed or dynamic if needed, but keeping it here for now */}
+        {/* Principals Table */}
         <section className="py-24 bg-cream">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-4 mb-12">
