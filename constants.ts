@@ -30,7 +30,7 @@ export const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "News", href: "/news" },
-  { label: "Contact Us", href: "/#contact" }
+  { label: "Contact", href: "/contact" }
 ];
 
 export const CLUBS = [

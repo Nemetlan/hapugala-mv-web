@@ -74,13 +74,7 @@ export function Navbar() {
             About
           </Link>
           <Link
-            href="/#academic"
-            className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:text-gold-heritage"
-          >
-            Academic
-          </Link>
-          <Link
-            href="/#contact"
+            href="/contact"
             className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:text-gold-heritage"
           >
             Contact
@@ -131,14 +125,7 @@ export function Navbar() {
                 About
               </Link>
               <Link
-                href="/#academic"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block rounded-2xl px-5 py-4 text-base font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 hover:text-gold-heritage"
-              >
-                Academic
-              </Link>
-              <Link
-                href="/#contact"
+                href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block rounded-2xl px-5 py-4 text-base font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 hover:text-gold-heritage"
               >
