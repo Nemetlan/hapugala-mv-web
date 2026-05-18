@@ -11,12 +11,12 @@ interface DynamicFormProps {
 }
 
 export function DynamicForm({ formId, fields, title }: DynamicFormProps) {
-  const [formData, setFormData] = useState<Record<string, any>>({});
+  const [formData, setFormData] = useState<Record<string, string | boolean>>({});
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (fieldId: string, value: any) => {
+  const handleChange = (fieldId: string, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [fieldId]: value }));
   };
 

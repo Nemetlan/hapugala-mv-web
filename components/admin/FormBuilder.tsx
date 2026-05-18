@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { 
-  Plus, 
   Trash2, 
   GripVertical, 
   Type, 
@@ -38,7 +37,7 @@ interface FormBuilderProps {
   };
 }
 
-const FIELD_TYPES: { type: FieldType; label: string; icon: any }[] = [
+const FIELD_TYPES: { type: FieldType; label: string; icon: React.ElementType }[] = [
   { type: 'text', label: 'Short Text', icon: Type },
   { type: 'email', label: 'Email', icon: Mail },
   { type: 'number', label: 'Number', icon: Hash },
@@ -46,6 +45,10 @@ const FIELD_TYPES: { type: FieldType; label: string; icon: any }[] = [
   { type: 'checkbox', label: 'Checkbox', icon: CheckSquare },
   { type: 'select', label: 'Dropdown', icon: ChevronDown },
 ];
+
+function generateId() {
+  return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+}
 
 export function FormBuilder({ initialData }: FormBuilderProps) {
   const router = useRouter();
@@ -60,7 +63,7 @@ export function FormBuilder({ initialData }: FormBuilderProps) {
 
   const addField = (type: FieldType) => {
     const newField: FormField = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: generateId(),
       type,
       label: `New ${type} field`,
       required: false,
@@ -176,7 +179,7 @@ export function FormBuilder({ initialData }: FormBuilderProps) {
           </div>
 
           <div className="space-y-4 mb-8">
-            {fields.map((field, index) => (
+            {fields.map((field) => (
               <div key={field.id} className="bg-cream/50 border border-border-grey rounded-2xl p-6 group relative">
                 <div className="flex items-start gap-4">
                   <div className="mt-1 text-midnight/20">

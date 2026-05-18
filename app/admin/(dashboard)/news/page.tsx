@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { ArrowUpRight, ShieldAlert, Sparkles } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { getCurrentAdmin } from '@/lib/supabase/admin';
 import { CreatePostForm } from '@/components/admin/CreatePostForm';
 import { formatNewsDate, type NewsPost } from '@/lib/news';

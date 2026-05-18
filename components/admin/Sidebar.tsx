@@ -6,8 +6,7 @@ import {
   LayoutDashboard, 
   Newspaper, 
   FormInput, 
-  Globe,
-  Settings
+  Globe
 } from 'lucide-react';
 import { SignOutButton } from './SignOutButton';
 import Image from 'next/image';

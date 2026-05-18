@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import { LayoutDashboard, Newspaper, FormInput, ArrowUpRight } from 'lucide-react';
+import { Newspaper, FormInput, ArrowUpRight } from 'lucide-react';
 import { getCurrentAdmin } from '@/lib/supabase/admin';
 import Link from 'next/link';
 

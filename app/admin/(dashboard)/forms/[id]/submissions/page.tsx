@@ -2,6 +2,7 @@ import { redirect, notFound } from 'next/navigation';
 import { getCurrentAdmin } from '@/lib/supabase/admin';
 import Link from 'next/link';
 import { ChevronLeft, Download, Trash2 } from 'lucide-react';
+import { type FormField } from '@/components/admin/FormBuilder';
 
 interface SubmissionsPageProps {
   params: Promise<{ id: string }>;
@@ -31,7 +32,7 @@ export default async function FormSubmissionsPage({ params }: SubmissionsPagePro
     .eq('form_id', id)
     .order('created_at', { ascending: false });
 
-  const fields = form.fields as any[];
+  const fields = (form.fields as unknown as FormField[]) || [];
 
   return (
     <main className="p-8 sm:p-12">
