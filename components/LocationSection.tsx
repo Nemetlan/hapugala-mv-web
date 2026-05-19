@@ -10,7 +10,7 @@ export function LocationSection() {
             <div className="text-gold-heritage font-bold uppercase tracking-[0.2em] text-xs mb-4">
               Visit Us
             </div>
-            <h2 className="text-4xl font-serif font-bold text-navy mb-8">On the banks of the Gin River</h2>
+            <h2 className="text-4xl font-serif font-bold text-navy mb-8">Where tranquility becomes the teacher</h2>
             <p className="text-midnight/70 leading-relaxed mb-8">
               Located in the heart of the Akmeemana division in Galle, our campus offers a serene and inspiring environment for learning.
             </p>
